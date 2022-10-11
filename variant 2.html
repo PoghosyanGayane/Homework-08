@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title>Second variant</title>
+</head>
+<body>
+    <p id="demo" style="font-size: 15px; font-weight: bold;"> </p>
+    <p id="demo1" style="font-size: 15px; font-weight: bold;"> </p>
+<script>
+var x=prompt("Մուտք անել առաջին տողը։");
+var y=prompt("Մուտք անել երկրորդ տողը։");
+var xA = x.split("");
+var yA = y.split("");
+var i,j,l=0,f='',i1,max='';
+for (i=0;i<xA.length;i++){
+  for (j=0;j<yA.length;j++){
+  if (xA[i]==yA[j])
+  { 
+    i1=i;
+    while (xA[i]==yA[j] && i<xA.length && j<yA.length)
+    {
+      f=f+xA[i];
+      l++;
+      i++;
+      j++;
+    }
+    if (l>max.length)
+    {
+        max=f;
+    }
+    l=0;
+    f='';
+    i=i1;
+  }
+}
+j=0;
+}
+document.getElementById("demo").innerHTML = max;
+document.getElementById("demo1").innerHTML = max.length;
+</script> 
+</body>
+</html>
+

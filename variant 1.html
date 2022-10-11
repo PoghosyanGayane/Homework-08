@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>First variant</title>
+</head>
+<body>
+<script>
+var x=prompt("Մուտք անել առաջին տողը։");
+var y=prompt("Մուտք անել երկրորդ տողը։");
+var xA = x.split("");
+var yA = y.split("");
+var i,j,l=0,k=0,f='',i1;
+var mutuals= new Array();;
+for (i=0;i<xA.length;i++){
+  for (j=0;j<yA.length;j++){
+  if (xA[i]==yA[j])
+  { 
+    i1=i;
+    while (xA[i]==yA[j] && i<xA.length && j<yA.length)
+    {
+      f=f+xA[i];
+      i++;
+      j++;
+    }
+    mutuals[k]=f; // finding all possible mutural parts and putting in an array
+    k++;
+    f='';
+    i=i1;
+  }
+}
+j=0;
+}
+alert(mutuals); 
+var max='',len=0;
+for (i=0;i<mutuals.length;i++)
+{
+  if (mutuals[i].length > len)
+  {
+    len=mutuals[i].length;
+    max=mutuals[i];
+  }
+}
+alert(max);
+</script> 
+</body>
+</html>
+
